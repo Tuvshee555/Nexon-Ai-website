@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dmflow",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["node_modules/next/dist/bin/next", "dev"],
+      "port": 3000,
+      "autoPort": false,
+      "cwd": "C:/Users/ganbo/OneDrive/Desktop/Folders/claude-code/dmflow"
+    }
+  ]
+}
