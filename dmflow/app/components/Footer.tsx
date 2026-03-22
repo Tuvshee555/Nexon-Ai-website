@@ -1,11 +1,10 @@
-import { Zap, Mail, Phone, MessageCircle, Instagram, Facebook } from "lucide-react";
+import { Zap, Mail, Phone, Instagram, Facebook } from "lucide-react";
 
-const TELEGRAM_LINK  = process.env.NEXT_PUBLIC_TELEGRAM_LINK  ?? "https://t.me/nexonnova";
-const PHONE_NUMBER   = process.env.NEXT_PUBLIC_PHONE_NUMBER   ?? "+976 9911 0000";
-const PHONE_RAW      = process.env.NEXT_PUBLIC_PHONE_RAW      ?? "+97699110000";
-const EMAIL_ADDRESS  = process.env.NEXT_PUBLIC_EMAIL_ADDRESS  ?? "hello@nexonnova.mn";
-const INSTAGRAM_LINK = process.env.NEXT_PUBLIC_INSTAGRAM_LINK ?? "https://instagram.com/nexonnova";
-const FACEBOOK_LINK  = process.env.NEXT_PUBLIC_FACEBOOK_LINK  ?? "https://facebook.com/nexonnova";
+const PHONE_NUMBER   = process.env.NEXT_PUBLIC_PHONE_NUMBER   ?? "+976 8618 5769";
+const PHONE_RAW      = process.env.NEXT_PUBLIC_PHONE_RAW      ?? "+97686185769";
+const EMAIL_ADDRESS  = process.env.NEXT_PUBLIC_EMAIL_ADDRESS  ?? "nexondigitalnova@gmail.com";
+const INSTAGRAM_LINK = process.env.NEXT_PUBLIC_INSTAGRAM_LINK ?? "https://www.instagram.com/nexon_nova/";
+const FACEBOOK_LINK  = process.env.NEXT_PUBLIC_FACEBOOK_LINK  ?? "https://www.facebook.com/profile.php?id=61582430194143";
 
 const productLinks = [
   { label: "Хэрхэн ажилладаг", href: "#how-it-works" },
@@ -48,7 +47,6 @@ export default function Footer() {
               {[
                 { icon: Instagram, href: INSTAGRAM_LINK, label: "Instagram" },
                 { icon: Facebook,  href: FACEBOOK_LINK,  label: "Facebook"  },
-                { icon: MessageCircle, href: TELEGRAM_LINK, label: "Telegram" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -99,17 +97,6 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <a
-                  href={TELEGRAM_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-zinc-500 text-sm hover:text-zinc-200 transition-colors"
-                >
-                  <MessageCircle size={14} />
-                  Telegram
-                </a>
-              </li>
-              <li>
-                <a
                   href={`tel:${PHONE_RAW}`}
                   className="flex items-center gap-2 text-zinc-500 text-sm hover:text-zinc-200 transition-colors"
                 >
@@ -126,12 +113,31 @@ export default function Footer() {
                   {EMAIL_ADDRESS}
                 </a>
               </li>
-              <li className="text-zinc-600 text-xs pt-1">
-                Даваа–Баасан, 09:00–18:00
+              <li>
+                <a
+                  href={INSTAGRAM_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-zinc-500 text-sm hover:text-zinc-200 transition-colors"
+                >
+                  <Instagram size={14} />
+                  @nexon_nova
+                </a>
+              </li>
+              <li>
+                <a
+                  href={FACEBOOK_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-zinc-500 text-sm hover:text-zinc-200 transition-colors"
+                >
+                  <Facebook size={14} />
+                  Nexon Nova
+                </a>
               </li>
               <li className="pt-2">
                 <a href="#contact" className="btn-primary text-sm py-2.5 px-4">
-                  Үнэгүй демо авах
+                  Демо захиалах
                 </a>
               </li>
             </ul>

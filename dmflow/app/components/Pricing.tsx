@@ -2,36 +2,35 @@ import { Check, Zap, ArrowRight } from "lucide-react";
 
 export const pricingPlans = [
   {
-    name: "Хөнгөн",
-    setupFee: "150,000₮",
+    name: "Эхлэх",
+    setupFee: "200,000₮",
     monthlyFee: "29,000₮",
-    tagline: "Дөнгөж эхэлж буй эсвэл жижиг бизнесүүдэд тохиромжтой.",
+    tagline: "Дөнгөж эхэлж буй бизнесийн хувьд хурдан эхлэх хамгийн хялбар арга.",
     features: [
       "Facebook эсвэл Instagram (1 хуудас)",
-      "Сарын 300 хүртэлх яриа",
-      "Байнгын 10 асуулт-хариулт",
-      "Лид мэдээлэл цуглуулах",
-      "Telegram мэдэгдэл",
+      "Сарын 300 яриа — харилцагч алдахгүй",
+      "10 байнгын асуулт автоматаар хариулна",
+      "Харилцагчийн нэр, утас цуглуулна",
+      "Telegram мэдэгдэл — шинэ лид ирэхэд",
       "Имэйл дэмжлэг",
     ],
-    cta: "Сонгох",
+    cta: "Эхлэх",
     highlight: false,
     badge: null,
   },
   {
-    name: "Стандарт",
+    name: "Өсөлт",
     setupFee: "200,000₮",
     monthlyFee: "39,000₮",
-    tagline: "Идэвхтэй бизнесүүдэд хамгийн тохиромжтой — алдартай сонголт.",
+    tagline: "Мессеж идэвхтэй ирдэг бизнест — борлуулалтыг нэмэгдүүлэх тогтолцоо.",
     features: [
       "Facebook + Instagram (2 хуудас)",
-      "Сарын 1000 хүртэлх яриа",
-      "Байнгын 30 асуулт-хариулт",
-      "Лид тодорхойлох урсгал",
-      "Хэрэглэгчийн мэдээлэл хадгалах",
-      "Telegram мэдэгдэл + тайлан",
-      "Дагалдах мессеж",
-      "Хүний гараар оролцох боломж",
+      "Сарын 1,000 яриа — хязгаарлалтгүй хариулт",
+      "30 байнгын асуулт автоматаар хариулна",
+      "Харилцагч тодорхойлох урсгал",
+      "Дагалдах мессеж — алдсан лидийг эргүүлнэ",
+      "Хүний гараар яриаг авах боломж",
+      "Telegram мэдэгдэл + сарын тайлан",
       "Хоног бүрийн дэмжлэг",
     ],
     cta: "Үнэгүй демо авах",
@@ -39,19 +38,18 @@ export const pricingPlans = [
     badge: "Хамгийн алдартай",
   },
   {
-    name: "Про",
-    setupFee: "350,000₮",
+    name: "Бүрэн автомат",
+    setupFee: "200,000₮",
     monthlyFee: "59,000₮",
-    tagline: "Олон хуудас эсвэл өндөр ачааллай бизнесүүдэд зориулсан.",
+    tagline: "Олон хуудас эсвэл өндөр ачаалалтай бизнест — бүрэн автомат систем.",
     features: [
-      "3 хүртэлх хуудас",
+      "3 хүртэлх хуудас нэгэн зэрэг",
       "Хязгааргүй яриа",
       "Бүрэн тохируулсан хариулт урсгал",
       "Захиалгын систем холболт",
-      "CRM / Google Sheets холболт",
+      "Google Sheets / CRM руу өгөгдөл дамжуулна",
       "Сарын гүйцэтгэлийн тайлан",
-      "Telegram + имэйл мэдэгдэл",
-      "Тэргүүлэх дэмжлэг (24 цаг)",
+      "Тэргүүлэх дэмжлэг — 24 цагт хариу",
     ],
     cta: "Холбогдох",
     highlight: false,
@@ -63,11 +61,11 @@ export const pricingPlans = [
     monthlyFee: "Тохиролцоогоор",
     tagline: "Олон салбар, франчайз эсвэл тусгай хэрэгцээтэй байгууллагуудад.",
     features: [
-      "Хязгааргүй хуудас",
+      "Хязгааргүй хуудас, салбар",
       "Тусгай брэнд дизайн",
-      "API / CRM интеграци",
-      "Өгөгдлийн нарийн тайлан",
-      "Тусгай менежер",
+      "API / CRM бүрэн интеграци",
+      "Нарийн тайлан, дашбоард",
+      "Тусгай менежер хариуцна",
       "SLA баталгаа",
     ],
     cta: "Ярилцах",
@@ -84,14 +82,23 @@ export default function Pricing() {
       </div>
 
       <div className="relative max-w-6xl mx-auto px-5">
-        <div className="text-center mb-14">
+        {/* Value statement */}
+        <div className="max-w-2xl mx-auto text-center mb-4 px-4 py-4 rounded-2xl bg-red-500/6 border border-red-500/15">
+          <p className="text-red-300 text-sm md:text-base font-medium leading-relaxed">
+            💬 Чатанд хариу өгөхгүйгээс болж та өдөр бүр харилцагч алдаж байна.
+          </p>
+        </div>
+
+        <div className="text-center mb-14 mt-10">
           <p className="section-label mb-3">Үнэ</p>
           <h2 className="text-3xl md:text-4xl font-black text-white leading-tight mb-4">
-            Нэг шинэ хэрэглэгч{" "}
+            Нэг шинэ харилцагч{" "}
             <span className="gradient-text">сарын хөлсийг нөхдөг.</span>
           </h2>
           <p className="text-zinc-400 text-base max-w-xl mx-auto">
-            Нуугдмал төлбөр байхгүй. Тохируулга бүх зүйлийг хамардаг — бид ажлыг хийнэ.
+            Нуугдмал төлбөр байхгүй. Бүх тарифт нэг удаагийн тохиргооны үнэ адилхан —{" "}
+            <span className="text-white font-semibold">200,000₮</span>.
+            Бид бүх ажлыг хийнэ.
           </p>
         </div>
 
@@ -123,7 +130,9 @@ export default function Pricing() {
                   )}
                 </div>
                 {plan.setupFee !== "Тохиролцоогоор" ? (
-                  <div className="text-zinc-500 text-xs">+ {plan.setupFee} нэг удаагийн тохируулга</div>
+                  <div className="text-zinc-500 text-xs">
+                    + <span className="text-zinc-400 font-medium">200,000₮</span> нэг удаагийн тохиргоо
+                  </div>
                 ) : (
                   <div className="text-zinc-500 text-xs">Тохиролцоогоор</div>
                 )}
@@ -152,11 +161,16 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-zinc-500 text-sm mt-8">
-          Бүх тарифт{" "}
-          <span className="text-white font-semibold">7 хоногийн туршилтын хугацаа</span>{" "}
-          байна. Үр дүн гарахгүй бол буцаан олгоно.
-        </p>
+        {/* Risk reversal */}
+        <div className="mt-10 flex items-center justify-center gap-3">
+          <div className="flex items-center gap-2.5 px-5 py-3 rounded-full bg-emerald-500/8 border border-emerald-500/20">
+            <span className="text-emerald-400 text-base">🛡️</span>
+            <p className="text-zinc-300 text-sm">
+              <span className="text-white font-semibold">7 хоног туршиж үзээд</span>{" "}
+              сэтгэл хангалуун биш бол буцаан олголт.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

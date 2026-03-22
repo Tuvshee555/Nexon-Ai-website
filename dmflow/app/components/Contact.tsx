@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Send, Phone, Mail, MessageCircle, CheckCircle2, Loader2 } from "lucide-react";
+import { Send, Phone, Mail, MessageCircle, CheckCircle2, Loader2, Instagram, Facebook } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -18,10 +18,12 @@ interface FormErrors {
   message?: string;
 }
 
-const TELEGRAM_LINK = process.env.NEXT_PUBLIC_TELEGRAM_LINK ?? "https://t.me/nexonnova";
-const PHONE_NUMBER  = process.env.NEXT_PUBLIC_PHONE_NUMBER  ?? "+976 9911 0000";
-const EMAIL_ADDRESS = process.env.NEXT_PUBLIC_EMAIL_ADDRESS ?? "hello@nexonnova.mn";
-const PHONE_RAW     = process.env.NEXT_PUBLIC_PHONE_RAW     ?? "+97699110000";
+const TELEGRAM_LINK  = process.env.NEXT_PUBLIC_TELEGRAM_LINK  ?? "https://t.me/nexonnova";
+const PHONE_NUMBER   = process.env.NEXT_PUBLIC_PHONE_NUMBER   ?? "+976 8618 5769";
+const EMAIL_ADDRESS  = process.env.NEXT_PUBLIC_EMAIL_ADDRESS  ?? "nexondigitalnova@gmail.com";
+const PHONE_RAW      = process.env.NEXT_PUBLIC_PHONE_RAW      ?? "+97686185769";
+const INSTAGRAM_LINK = process.env.NEXT_PUBLIC_INSTAGRAM_LINK ?? "https://www.instagram.com/nexon_nova/";
+const FACEBOOK_LINK  = process.env.NEXT_PUBLIC_FACEBOOK_LINK  ?? "https://www.facebook.com/profile.php?id=61582430194143";
 
 function validate(data: FormData): FormErrors {
   const errors: FormErrors = {};
@@ -125,9 +127,41 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-white text-sm font-semibold">{EMAIL_ADDRESS}</div>
-                  <div className="text-zinc-500 text-xs">Gmail дээр ирэх захидал</div>
+                  <div className="text-zinc-500 text-xs">Gmail-ээр холбогдох</div>
                 </div>
               </a>
+
+              <div className="grid grid-cols-2 gap-3">
+                <a
+                  href={INSTAGRAM_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 rounded-xl bg-[#1a1a27] border border-white/[0.08] hover:border-pink-500/30 transition-all"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center">
+                    <Instagram size={18} className="text-pink-400" />
+                  </div>
+                  <div>
+                    <div className="text-white text-sm font-semibold">Instagram</div>
+                    <div className="text-zinc-500 text-xs">@nexon_nova</div>
+                  </div>
+                </a>
+
+                <a
+                  href={FACEBOOK_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 rounded-xl bg-[#1a1a27] border border-white/[0.08] hover:border-blue-500/30 transition-all"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                    <Facebook size={18} className="text-blue-400" />
+                  </div>
+                  <div>
+                    <div className="text-white text-sm font-semibold">Facebook</div>
+                    <div className="text-zinc-500 text-xs">Nexon Nova</div>
+                  </div>
+                </a>
+              </div>
             </div>
 
             {/* Quick trust signals */}
